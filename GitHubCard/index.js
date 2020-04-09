@@ -92,13 +92,6 @@ function GithubCard(object){
   return card
 }
 
-/* List of LS Instructors Github username's: 
-  tetondan
-  dustinmyers
-  justsml
-  luishrd
-  bigknell
-*/
 
 const cards = document.querySelector('.cards')
 
@@ -107,7 +100,13 @@ axios.get('https://api.github.com/users/nomaddaniel')
     console.log(response)
     cards.appendChild(GithubCard(response.data))
     })
-
+/* List of LS Instructors Github username's: 
+  tetondan
+  dustinmyers
+  justsml
+  luishrd
+  bigknell
+*/
 const instructors = ['tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell']
 
 instructors.forEach(instructor => {
