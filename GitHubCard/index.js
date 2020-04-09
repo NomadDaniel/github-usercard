@@ -107,6 +107,7 @@ axios.get('https://api.github.com/users/nomaddaniel')
   luishrd
   bigknell
 */
+// __________instructors_________ //
 const instructors = ['tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell']
 
 instructors.forEach(instructor => {
@@ -116,6 +117,7 @@ instructors.forEach(instructor => {
   }) 
 })
 
+// __________followerurl_________ //
 const followerurl = []
 
 axios.get('https://api.github.com/users/nomaddaniel/followers')
@@ -132,6 +134,7 @@ axios.get('https://api.github.com/users/nomaddaniel/followers')
     })
   }) 
 
+  // __________follingurl_________ //
 const followingurl = []
 
 axios.get('https://api.github.com/users/nomaddaniel/following')
