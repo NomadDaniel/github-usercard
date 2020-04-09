@@ -95,7 +95,7 @@ function GithubCard(object){
 
 const cards = document.querySelector('.cards')
 
-axios.get('https://api.github.com/users/NathanNNguyen')
+axios.get('https://api.github.com/users/nomaddaniel')
   .then((response) => {
     console.log(response)
     cards.appendChild(GithubCard(response.data))
@@ -120,7 +120,7 @@ instructors.forEach(instructor => {
 // __________followerurl_________ //
 const followerurl = []
 
-axios.get('https://api.github.com/users/NathanNNguyen/followers')
+axios.get('https://api.github.com/users/nomaddaniel/followers')
   .then ((response) => {
     console.log(response.data)
     response.data.forEach(item => {
