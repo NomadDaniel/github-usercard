@@ -132,7 +132,7 @@ axios.get('https://api.github.com/users/nomaddaniel/followers')
     })
   }) 
 
-  const followingurl = []
+const followingurl = []
 
 axios.get('https://api.github.com/users/nomaddaniel/following')
   .then ((response) => {
