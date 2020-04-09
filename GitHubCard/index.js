@@ -127,7 +127,23 @@ axios.get('https://api.github.com/users/nomaddaniel/followers')
     followerurl.forEach(urlItem => {
       axios.get(urlItem)
         .then ((response) => {
-          cards.appendChild(GithubCard(response.data));
+          cards.appendChild(GithubCard(response.data))
+        })
+    })
+  }) 
+
+  const followingurl = []
+
+axios.get('https://api.github.com/users/nomaddaniel/following')
+  .then ((response) => {
+    console.log(response.data)
+    response.data.forEach(item => {
+      followingurl.push(item.url)
+    })
+    followingurl.forEach(urlItem => {
+      axios.get(urlItem)
+        .then ((response) => {
+          cards.appendChild(GithubCard(response.data))
         })
     })
   }) 
